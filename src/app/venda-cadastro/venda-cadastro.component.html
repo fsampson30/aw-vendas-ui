@@ -8,9 +8,12 @@
     <div class="ui-g">
         <div class="ui-g-8 ui-fluid">
             <label>Cliente</label>
-            <p-dropdown id="cliente" name="cliente" 
-             placeholder="Selecione..."
+            <p-dropdown id="cliente" name="cliente" autoWidth="false"
+              placeholder="Selecione..."
               [options]="clientes" optionLabel="nome"></p-dropdown>
         </div>
+        <div class="ui-g-4 ui-fluid"></div>
+        <label>Frete</label>
+        <input pInputText id="frete" name="frete" allowNegative="false" currencyMask [options]="{ prefix: '', thousands: '.', decimal: ',' }"  />
     </div>
 </form>

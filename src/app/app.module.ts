@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
+
+import {CurrencyMaskModule} from 'ng2-currency-mask'
 import {HttpClientModule} from '@angular/common/http'
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
@@ -28,7 +31,9 @@ registerLocaleData(localePt);
     BrowserAnimationsModule,
     TableModule,
     HttpClientModule,
-    DropdownModule
+    DropdownModule,
+    InputTextModule,
+    CurrencyMaskModule
   ],
   providers: [
     {
