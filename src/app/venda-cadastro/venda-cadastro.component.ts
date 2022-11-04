@@ -8,12 +8,22 @@ import { VendasService } from '../vendas/vendas.service';
 })
 export class VendaCadastroComponent implements OnInit {
 
+  venda = { itens: []};
+  item: any = {};
   clientes: Array<any> = []
+  produtos: Array<any> = [] 
 
   constructor(private vendaService: VendasService) { }
 
   ngOnInit(): void {
-    this.vendaService.listarCLientes().subscribe(response => this.clientes = response)
+    this.vendaService.listarClientes().subscribe(response => this.clientes = response)
+    this.vendaService.listarProdutos().subscribe(response => this.produtos = response)
+  }
+
+  incluirItem() {
+    this.item.total = (this.item.produto.valor * this.item.quantidade)
+    //this.venda.itens.push(this.item)
+    this.item = {}
   }
 
 }
