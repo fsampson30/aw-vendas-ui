@@ -2,6 +2,7 @@ import { NgModule , LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
+import { DropdownModule } from 'primeng/dropdown';
 import {HttpClientModule} from '@angular/common/http'
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
@@ -26,7 +27,8 @@ registerLocaleData(localePt);
     AppRoutingModule,
     BrowserAnimationsModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    DropdownModule
   ],
   providers: [
     {
