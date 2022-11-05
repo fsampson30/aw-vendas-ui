@@ -9,7 +9,7 @@ import { VendasService } from '../vendas/vendas.service';
 export class VendaCadastroComponent implements OnInit {
 
   venda = { itens: []};
-  item: any = {};
+  item: any = {}
   clientes: Array<any> = []
   produtos: Array<any> = [] 
 
